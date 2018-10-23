@@ -9,7 +9,8 @@ What would an OpenBSD router configured using examples from the OpenBSD FAQ and 
 
 
 ## fl8s Changelog
-Add some find and replace scripts to automate and customize vedetta for your environment/hostname/whatever.
+Add some find and replace scripts to automate and customize vedetta for your environment/hostname/whatever. A more structured (config managed) approach would likely have taken the same amount of time, but where's the fun in that?
+
 Added test scripts and some infrastructure to run inside [Vagrant](https://vagrantup.org) with some other hosts attached, to observe your changes. I'm hoping to figure out how to use it as an intermedieary between your box and the rest of the network.
 
 ## Features
