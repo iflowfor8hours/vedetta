@@ -1,4 +1,4 @@
-# vedetta (alpha)
+# fl8s fork of `vedetta (alpha)`
 *Open*BSD Router Boilerplate
 
 ![Vedetta Logo](https://avatars2.githubusercontent.com/u/29383850)
@@ -6,6 +6,11 @@
 > an opinionated, best practice, vanilla OpenBSD base configuration for bare-metal, or cloud routers
 
 What would an OpenBSD router configured using examples from the OpenBSD FAQ and Manual pages look like?
+
+
+## fl8s Changelog
+Add some find and replace scripts to automate and customize vedetta for your environment/hostname/whatever.
+Added test scripts and some infrastructure to run inside [Vagrant](https://vagrantup.org) with some other hosts attached, to observe your changes. I'm hoping to figure out how to use it as an intermedieary between your box and the rest of the network.
 
 ## Features
 Share what you've got, keep what you need:
@@ -389,7 +394,7 @@ Revoke certificates as often as possible.
 
 [SSH fingerprints verified by DNS](http://man.openbsd.org/ssh#VERIFYING_HOST_KEYS) is done by adding Secure Shell (Key) Fingerprint (SSHFP) Resource Record (RR) to [`var/nsd/zones/master/vedetta.lan.zone`](src/var/nsd/zones/master/vedetta.lan.zone): `ssh-keygen -r vedetta.lan.`  
 Verify: `dig -t SSHFP vedetta.lan`  
-Usage: `ssh -o "VerifyHostKeyDNS ask" acolyte.vedetta.lan`
+Usage: `ssh -o "VerifyHostKeyDNS ask" child.foil.lan`
 
 Manage keys with [ssh-agent](https://man.openbsd.org/ssh-agent).
 
