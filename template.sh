@@ -1,9 +1,11 @@
 host=child
 domain=foil
 tld=lan
-wan_em0=
+#wan_em0
 lan_em1=172.16.99.1
 lan_em2=192.168.99.1
+lan_em1_net=172.16.99
+lan_em2_net=192.168.99
 lan_ether0=10.10.10.10
 lan_ether0_alias=10.10.10.11
 
@@ -16,6 +18,10 @@ sed -i 's/boot.vedetta.lan/boot.${domain}.${tld}/g' $(git ls-files)
 # without heavy manual intervention, or (more likely) docker madness.
 sed -i 's/10.10.10.10/${lan_ether0}/g' $(git ls-files)
 sed -i 's/10.10.10.11/${lan_ether0_alias}/g' $(git ls-files)
+
+# Shameful abuse of sed
+sed -i 's/192.168.0/${lan_em0_net}/g' $(git ls-files)
+sed -i 's/172.16.0/${lan_em1_net}/g' $(git ls-files)
 
 # Nothing magical here, mostly single instance stragglers or filenames
 sed -i 's/vedetta.lan/${domain}.${tld}/g' src/var/unbound/etc/unbound.conf
