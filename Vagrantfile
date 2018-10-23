@@ -10,14 +10,14 @@ Vagrant.configure("2") do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP.
-  config.vm.network "private_network", ip: "10.10.10.10"
+  # em0 - public, bridged
+  config.vm.network "public_network"
 
-  # Create a public network, which generally matched to bridged network.
-  # Bridged networks make the machine appear as another physical device on
-  # your network.
-  # config.vm.network "public_network"
+  # em1 - private
+  config.vm.network "private_network", ip: "172.16.99.1"
+
+  # em2 - filtered
+  config.vm.network "private_network", ip: "172.16.99.1"
 
   config.vm.synced_folder "./src", "/vagrant", type: "rsync",
     rsync__exclude: ".git/"
