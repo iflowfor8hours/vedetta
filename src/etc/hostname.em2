@@ -1,6 +1,6 @@
 -inet
 -inet6
-inet 192.168.0.1 255.255.255.0 192.168.0.255
+inet 192.168.99.1 255.255.255.0 192.168.99.255
 inet6 2001:470:b35c:bead::ace:face 64
 inet6 alias fd80:1fe9:fcee:bead::ace:face 64
 group lan
