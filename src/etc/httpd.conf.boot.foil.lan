@@ -1,5 +1,5 @@
 # autoinstall
-server "boot.vedetta.lan" {
+server "boot.foil.lan" {
 	listen on $fb1_IPv4 port http
 	listen on $fb1_IPv6 port http
 
@@ -11,7 +11,7 @@ server "boot.vedetta.lan" {
 	block
 
 	location "/*" {
-		root "/htdocs/boot.vedetta.lan"
+		root "/htdocs/boot.foil.lan"
 		directory auto index
 		pass
 	}
