@@ -1,2 +1,10 @@
 Figure out how to simplify the templating of the dns related configs when less tired.
 Document that I did keep the name puffy, make that configurable.
+Figure out if you need https://github.com/northox/dnssec-reverb
+
+Remain inspired by https://github.com/lavabit/robox/tree/master/scripts/openbsd6
+Don't forget how cool https://github.com/Cyclenerd/postinstall/blob/master/postinstall.sh is
+This is just mad useful in general https://gitlab.com/jschx/uguush/blob/master/uguush
+Probably what I should have rolled with https://github.com/ligurio/openbsd-cookbooks/tree/master/roles
+
+I swore I would be workingon https://github.com/godarch/darch tonight!!!
